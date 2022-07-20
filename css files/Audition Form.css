@@ -19,13 +19,13 @@ html,body{
   color: #fff;
 }
 .wrapper{
-    margin-top: 100px;
+    margin-top: 40px;
     margin-bottom: 100px;
   overflow: hidden;
   max-width: 900px;
   background: #fff;
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
 }
 .titles{
@@ -118,7 +118,9 @@ input[type="radio"]{
 .form-inner form .field{
   height: 50px;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 6vw;
+  margin-bottom: 50px;
+  font-size: 2vh;
 }
 .form-inner form .field input{
   height: 100%;
@@ -128,7 +130,7 @@ input[type="radio"]{
   border-radius: 5px;
   border: 1px solid lightgrey;
   border-bottom-width: 2px;
-  font-size: 17px;
+  font-size: 2vh;
   transition: all 0.3s ease;
 }
 .form-inner form .field input:focus{
@@ -207,11 +209,14 @@ footer span a:hover{
 }
 .field{
     color: black;
+    line-height: 5vw;
 }
 .form-inner form .field1{
     height: 50px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 5vw;
+    font-size: 2vh;
+    margin-bottom: 70px;
   }
   .form-inner form .field1 input{
     height: 100%;
@@ -219,9 +224,9 @@ footer span a:hover{
     outline: none;
     padding-left: 15px;
     border-radius: 5px;
+    font-size: 2vh;
     /*border: 1px solid lightgrey;
     border-bottom-width: 2px;*/
-    font-size: 17px;
     transition: all 0.3s ease;
   }
   .form-inner form .field1 input:focus{
@@ -238,11 +243,13 @@ footer span a:hover{
   /*myfield*/
   .field{
     color: black;
+    margin-top: 500px;
 }
 .form-inner form .myfield{
     height: 50px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 2vw;
+    font-size: 2vh;
   }
   .form-inner form .myfield input{
     /*height: 100%;
@@ -252,7 +259,7 @@ footer span a:hover{
     border-radius: 5px;
     /*border: 1px solid lightgrey;
     border-bottom-width: 2px;*/
-    font-size: 17px;
+    font-size: 2vh;
     transition: all 0.3s ease;
   }
   .form-inner form .myfield input:focus{
@@ -266,37 +273,7 @@ footer span a:hover{
   form .myfield input:focus::placeholder{
     color: #b3b3b3;
   }
-  /*2nd
-  .form-inner form .field2{
-    height: 50px;
-    width: 100%;
-    margin-top: 50px;
-  }
-  .form-inner form .field2 input{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    padding-left: 15px;
-    border-radius: 5px;
-    /*border: 1px solid lightgrey;
-    border-bottom-width: 2px;
-    font-size: 15px;
-    transition: all 0.3s ease;
-  }
-  .form-inner form .field2 input:focus{
-    border-color: none;
-    /* box-shadow: inset 0 0 3px #fb6aae; 
-  }
-  .form-inner form .field2 input::placeholder{
-    color: #999;
-    transition: all 0.3s ease;
-  }
-  form .field2 input:focus::placeholder{
-    color: #b3b3b3;
-  }*/
-  /* navbar styling */
-
-  .scroll-up-btn{
+   .scroll-up-btn{
     position: fixed;
     height: 45px;
     width: 42px;
@@ -324,32 +301,26 @@ footer span a:hover{
     filter: brightness(90%);
 }
 .timers{
-  color: crimson;
-  font-size: 30px;
-  background-color: none;
-  border: 2px solid crimson;
-  font-weight: normal;
-  padding-bottom: 0px;
+  background-color: crimson;
+  border-radius: 5px;
 }
-.timer_text{
-  font-size: 25px;
-  color: crimson;
-  text-align: center;
-  padding-top: 20px;
+.progress{
+  position: relative;
+  width: 300px;
+  height: 1px;
+  background: green;
+  border-radius: 5px;
+  overflow: hidden;
 }
-
-@media only screen and (max-width : 992px){
-
-    .field{
-        font-size: 2vh;
-        }
-    .field1{
-      font-size: 2vh;
-    }
-
-    .myfield{
-      font-size: 2vh;
-    }
-  .on-scroll{
-    background-color:rgb(0, 139, 139, 0.9);
-  }}
+.progressfill{
+  width: 0%;
+  height: 100%;
+  background: #000111;
+  transition: all 0.5s;
+}
+.progresstext{
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
