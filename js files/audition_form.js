@@ -15,43 +15,47 @@ signupLink.onclick = (() => {
    signupBtn.click();
    return false;
 });
-
+let div1 = document.getElementById("div1");
+let div2 = document.getElementById("div2");
 function showhideForm(showform) {
    if (showform == "Event") {
-      document.getElementById("div1").style.display = 'block';
-      document.getElementById("div2").style.display = 'none';
+      div1.style.display = 'block';
+      div2.style.display = 'none';
    }
    else if (showform == "Content") {
-      document.getElementById("div2").style.display = 'block';
-      document.getElementById("div1").style.display = 'none';
+      div2.style.display = 'block';
+      div1.style.display = 'none';
    }
    else if (showform == "All") {
-      document.getElementById("div2").style.display = 'block';
-      document.getElementById("div1").style.display = 'block';
+      div2.style.display = 'block';
+      div1.style.display = 'block';
    }
 }
+let div3 = document.getElementById("div3");
+let div4 = document.getElementById("div4");
+let div5 = document.getElementById("div5");
 
 function showhideTechForm(showform1) {
    if (showform1 == "gd") {
-      document.getElementById("div3").style.display = 'block';
-      document.getElementById("div4").style.display = 'none';
-      document.getElementById("div5").style.display = 'none';
+      div3.style.display = 'block';
+      div4.style.display = 'none';
+      div5.style.display = 'none';
    }
    else if (showform1 == "webd") {
-      document.getElementById("div4").style.display = 'block';
-      document.getElementById("div3").style.display = 'none';
-      document.getElementById("div5").style.display = 'none';
+      div4.style.display = 'block';
+      div3.style.display = 'none';
+      div5.style.display = 'none';
    }
    else if (showform1 == "video") {
-      document.getElementById("div4").style.display = 'none';
-      document.getElementById("div3").style.display = 'none';
-      document.getElementById("div5").style.display = 'block';
+      div4.style.display = 'none';
+      div3.style.display = 'none';
+      div5.style.display = 'block';
    }
 }
 //timer
 
-const myTime = document.querySelector('h1');
-// const myTime = document.getElementById('countdown');
+// const myTime = document.querySelector('h1');
+const myTime = document.getElementById('countdown');
 let timeSecond = 3600;
 const countDown = setInterval(() => {
    timeSecond--;
@@ -62,8 +66,8 @@ const countDown = setInterval(() => {
    }
 }, 1000);
 const bars = document.querySelector(".progress");
-        function update(progressBar, value){
-            value = Math.round(value);
-            progressBar.querySelector(".progressfill").style.width = `${value}%`;
-            progressBar.querySelector(".progresstext").textContent = `${value}%`;
-        }
+function update(progressBar, value) {
+   value = Math.round(value);
+   progressBar.querySelector(".progressfill").style.width = `${value}%`;
+   progressBar.querySelector(".progresstext").textContent = `${value}%`;
+}
