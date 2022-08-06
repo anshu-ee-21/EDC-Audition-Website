@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,15 +9,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
+
 <body>
   <section>
     <div class="container fixed-top timers d-flex justify-content-center align-items-center">
       <h1 id="countdown" style="color: white;"><b>00:00:00</b></h1>
       <br>
-    <div class="progress">
-      <div class="progressfill"></div>
-      <span class="progresstext">0%</span>
-  </div>
+      <div class="progress">
+        <div class="progressfill"></div>
+        <span class="progresstext">0%</span>
+      </div>
     </div>
   </section>
   <div class="container my-5 wrapper">
@@ -87,15 +89,15 @@
             </select>
             <br>
             <div class="d-grid gap-2">
-              <button class="btn" type="button"
-                style="background-color: crimson; color:white; font-size:20px" onclick="update(bars,33)">Next</button>
+              <button class="btn" type="button" style="background-color: crimson; color:white; font-size:20px"
+                onclick="update(bars,33)">Next</button>
             </div>
           </form>
         </div>
       </div>
     </div>
   </div>
-  
+
   <div class="container my-4">
     <div class="row">
       <div class="col d-flex justify-content-center align-items-center">
@@ -169,8 +171,8 @@
                 </div>
                 <br>
                 <div class="d-grid gap-2">
-                  <button class="btn" type="button"
-                    style="background-color: crimson; color:white; font-size:20px"  onclick="update(bars,67)">Submit</button>
+                  <button class="btn" type="button" style="background-color: crimson; color:white; font-size:20px"
+                    onclick="update(bars,67)">Submit</button>
                 </div>
               </form>
               <form action="#" class="signup">
@@ -239,8 +241,8 @@
                 </div>
                 <br>
                 <div class="d-grid gap-2">
-                  <button class="btn" type="button"
-                    style="background-color: crimson; color:white; font-size:20px"  onclick="update(bars,100)">Submit</button>
+                  <button class="btn" type="button" style="background-color: crimson; color:white; font-size:20px"
+                    onclick="update(bars,100)">Submit</button>
                 </div>
               </form>
             </div>
@@ -251,15 +253,16 @@
   </div>
   <script>
     const bars = document.querySelector(".progress");
-        function update(progressBar, value){
-            value = Math.round(value);
-            progressBar.querySelector(".progressfill").style.width = `${value}%`;
-            progressBar.querySelector(".progresstext").textContent = `${value}%`;
-        }
+    function update(progressBar, value) {
+      value = Math.round(value);
+      progressBar.querySelector(".progressfill").style.width = `${value}%`;
+      progressBar.querySelector(".progresstext").textContent = `${value}%`;
+    }
   </script>
   <script src="../js files/audition_form.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
 </body>
+
 </html>
