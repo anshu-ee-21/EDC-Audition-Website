@@ -1,8 +1,10 @@
+from multiprocessing import context
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
 
+from .models import TextQuestion
 
 # Create your views here.
 def index(request):
@@ -53,4 +55,11 @@ def signup(request):
         return render(request, 'login.html')
 
 def questions(request):
-    return render(request, 'Audition Form.html')
+    current_user = request.user
+    questions= TextQuestion.objects.all()
+    context={
+        'questions':questions,
+        'user':current_user,
+
+    }
+    return render(request, 'Audition Form.html', context)

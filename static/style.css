@@ -7,6 +7,17 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+.loader{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    background-image: url('../images/preloader.gif');
+    position: fixed;
+    z-index: 1000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 html{
     scroll-behavior: smooth;
 }
@@ -165,7 +176,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("../images/banner1.jpg") no-repeat center;
+    background: url("banner1.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -558,3 +569,24 @@ footer span a:hover{
         line-height: 38px;
     }
 }
+@media only screen and (max-width: 450px) {
+    .home{
+        width: 100vh;
+    }
+    .about{
+        width: 100vh;
+    }
+    .services{
+        width: 100vh;
+    }
+    .skills{
+        width: 100vh;
+    }
+    .contact{
+        width: 100vh;
+    }
+    .footer{
+        width: 100vh;
+    }
+  }
+
