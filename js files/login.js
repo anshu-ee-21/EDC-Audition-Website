@@ -15,3 +15,7 @@ const loginText = document.querySelector(".title-text .login");
            signupBtn.click();
            return false;
          });
+         var preloader = document.getElementById('loader')
+         function loadingFunction(){
+          preloader.style.display = 'none';
+         }
