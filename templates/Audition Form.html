@@ -81,13 +81,20 @@
           <div class="titles">
             Student Details
           </div>
-          <form>
+          <form action="{% url 'questions'%}" method='POST'>
+            {%csrf_token%}
+
             {%for question in questions%}
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">{{question.question_text}}</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+              <input type="text" class="form-control" id="{{question.forloop.counter}}" aria-describedby="emailHelp" name="response{{forloop.counter}}">
             </div>
             {%endfor%}
+
+            
+            
+
             <!-- <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Where do you live?</label>
               <input type="text" class="form-control" id="exampleInputPassword1">
@@ -96,16 +103,33 @@
               <label for="exampleInputPassword1" class="form-label">What are your hobbies?</label>
               <input type="text" class="form-control" id="exampleInputPassword1">
             </div> -->
-            <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">TEXT AREA TYPE QUESTION</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Which teams do you want to audition for?</option>
-              <option value="1">Core</option>
-              <option value="2">Tech</option>
-              <option value="3">Both</option>
-            </select>
+            
+              
+              <select class="form-select" aria-label="Default select example" name="responsechoice">
+              
+            
+              
+                <option selected>Which teams do you want to audition for?</option>
+                     
+                <option value="Core" name="response">Core</option>
+                <option value="Tech" name="response">Tech</option>
+                <option value="Both Core and Tech" name="response">Both Core and Tech</option>
+
+                
+              </select>
+
+  <!--
+    ############################################################################################################
+    #############################################################################################################
+    ##############################################################################################################
+  -->
+
+              
+
+
+            
+              <input type="submit">
+           
             <br>
             <div class="d-grid gap-2">
               <button class="btn" type="button"
